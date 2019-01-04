@@ -12,11 +12,12 @@ router.post("/echo", function (req, res) {
       req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
-      console.log(req.body);
+  console.log(req.body);
   return res.json({
-    speech: speech,
+   
     displayText: speech,
     source: "webhook-echo-sample"
   });
 });
+
 module.exports = router;
